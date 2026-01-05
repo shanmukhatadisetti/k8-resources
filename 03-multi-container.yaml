@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: multicontainer
-  lables:
+  labels:
     project: roboshop
     purpose: multicontainer-demo
 spec:
-  conatiners:
+  containers:
   - name: nginx
     image: nginx
   - name: almalinux
