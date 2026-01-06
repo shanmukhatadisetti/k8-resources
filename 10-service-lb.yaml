@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: service-lb 
   labels:
-  purpose: service-lb-demo 
+    purpose: service-lb-demo 
 spec:
   type: LoadBalancer
   selector:
