@@ -10,9 +10,10 @@ spec:
     env: dev
     component: service-np
   ports:
-    protocol: TCP
-    port: 80
-    targetPort: 80
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
 
 ---
 apiVersion: v1 
