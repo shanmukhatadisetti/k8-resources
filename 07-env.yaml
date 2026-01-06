@@ -6,8 +6,9 @@ metadata:
    purpose: env-demo
 spec:
   containers:
-  - name: nginx
-    image: nginx
+  - name: almalinux
+    image: almalinux:9
+    command: ["sleep", "10000"]
     env:
     - name: course
       value: "kubernetes"
