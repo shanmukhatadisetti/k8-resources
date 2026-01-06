@@ -3,7 +3,7 @@ kind: Service
 metadata: 
   name: service-np 
   labels:
-    purpose: demo service-np
+    purpose: demo-service-np
 spec:
   selector:
     project: roboshop
