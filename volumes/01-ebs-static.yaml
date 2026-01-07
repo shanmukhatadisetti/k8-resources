@@ -33,7 +33,7 @@ metadata:
     purpose: ebs-static-demo
     project: roboshop
 spec:
-  nodeselector:
+  nodeSelector:
     topology.kubernetes.io/zone: us-east-1a
   containers:
   - name: nginx
