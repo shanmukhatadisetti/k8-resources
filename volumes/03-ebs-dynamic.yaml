@@ -15,6 +15,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
+  labels:
+    purpose: ebs-dynamic-demo
+    project: roboshop
 spec:
   containers:
   - name: nginx
@@ -26,3 +29,20 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: roboshop-ebs
+---
+apiVersion: v1
+kind: Service 
+metadata:
+  name: ebs-dynamic 
+  labels:
+    purpose: ebs-dynamic-demo
+    project: roboshop
+spec:
+  type: LoadBalancer
+  selector:
+    purpose: ebs-dynamic-demo
+    project: roboshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
