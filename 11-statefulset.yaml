@@ -46,7 +46,6 @@ spec:
       project: roboshop
   serviceName: "sc-headless-svc"
   replicas: 3 # by default is 1
-  minReadySeconds: 10 # by default is 0
   template:
     metadata:
       labels:
@@ -54,13 +53,9 @@ spec:
         env: dev
         project: roboshop # has to match .spec.selector.matchLabels
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
       - name: nginx
         image: nginx
-        ports:
-        - containerPort: 80
-          name: web
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html
