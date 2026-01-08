@@ -23,9 +23,9 @@ metadata:
 spec:
   selector:
     matchLabels:
-    purpose: demo
-    env: dev
-    project: roboshop
+      purpose: demo
+      env: dev
+      project: roboshop
   serviceName: "sc-headless-svc"
   replicas: 3 # by default is 1
   minReadySeconds: 10 # by default is 0
