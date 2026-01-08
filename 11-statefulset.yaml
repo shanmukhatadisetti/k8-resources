@@ -16,6 +16,24 @@ spec:
     env: dev
     project: roboshop
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sc-normal-svc
+  labels:
+    purpose: demo
+    env: dev
+    project: roboshop
+spec:
+  selector:
+    purpose: demo
+    env: dev
+    project: roboshop
+  ports:
+    - protocol: TCP 
+      port: 80
+      targetPort: 80
+---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
